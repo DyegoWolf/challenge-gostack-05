@@ -23,7 +23,6 @@ class TransactionsRepository {
     return(this.transactions);
   }
 
-
   public getBalance(): Balance {
     // Soma dos valores de entrada
     const income = this.transactions.reduce((accumulator, transactions) => {
@@ -48,7 +47,6 @@ class TransactionsRepository {
 
     return({income, outcome, total});
   }
-
 
   public create({title, type, value}: CreateTransactionDTO): Transaction {
     const newTransaction = new Transaction({title, type, value});

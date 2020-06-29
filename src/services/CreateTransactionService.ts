@@ -16,6 +16,7 @@ class CreateTransactionService {
 
   public execute({title, type, value}: RequestDTO): Transaction {
 
+    // Não permite criar transação com tipo inválido
     if(type != 'income' && type != 'outcome'){
       throw Error('Invalid type! Must be income or outcome.');
     }
